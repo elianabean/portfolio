@@ -1,3 +1,153 @@
-#hk {
-    font-family: 'Lato', sans-serif;
+/* 
+font-family: 'Cormorant Garamond', serif;
+font-family: 'Libre Bodoni', serif; // this is the thicker one
+*/
+
+body, html {
+    height:100%;
+    width:100%;
+    margin:0;
+}
+
+#section1 {
+
+    height:100%;
+    width:100%;
+    margin:0;
+    
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/images/bg_image.jpg');
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    
+
+}
+
+#name_container {
+    width: 50%;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+#name_text {
+    font-family: 'Libre Bodoni', serif;
+    font-size: 70px;
+    color: white;
+    margin: 0;
+}
+
+#below_name {
+    font-family: 'Cormorant Garamond', serif;
+    color: white;
+    vertical-align: baseline;
+}
+
+#job {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 30px;
+}
+
+#email {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 30px;
+}
+
+#line {
+    display: inline-block;
+    vertical-align: middle;
+    height: 35px;
+}
+
+#section2 {
+    height:200%;
+    width:100%;
+    
+    background-color: #f4f2f1;
+}
+
+#work_container {
+    width: 95%;
+    position: absolute;
+    margin: 0;
+    top: 150%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+
+}
+
+table {
+    align-self: center;
+    
+    margin: 0 auto;
+    margin-top: 50%; /*i dont like this*/
+    border-spacing: 50px;
+}
+
+
+.companyimg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.left {
+    width: 60%;
+}
+
+.left img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.right {
+    width: 40%;
+}
+
+.right p {
+    font-family: 'Cormorant Garamond', serif;
+    text-align: justify;
+    font-size: 20px;
+}
+
+.right h1 {
+    font-size: 30px;
+    font-family: 'Libre Bodoni', serif; 
+    text-align: center;
+}
+
+footer {
+    width: 100%;
+    background-color: #e6dcdc;
+    font-family: 'Cormorant Garamond', serif;
+    padding: 30px 0;
+    text-align: center;
+}
+
+
+footer ul {
+    margin: 0;
+    text-align: center;
+}
+
+footer li {
+    width: 25%;
+    display: inline-block;
+    font-size: 20px;
+}
+
+footer #contact {
+    font-size: 25px;
 }
