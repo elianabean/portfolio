@@ -14,7 +14,7 @@
         <!-- nav bar code from https://flowbite.com/docs/components/navbar/-->
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
       <a href="#" class="flex items-center space-x-3">
-          <span class="text-2xl font-semibold">Eliana Wang</span>
+          <span class="text-2xl font-semibold font-workSans">Eliana Wang</span>
       </a>
       
       <!-- the hamburger menu -->
@@ -24,7 +24,7 @@
           </svg>
       </button>
 
-      <div class="hidden w-full md:block md:w-auto">
+      <div class="hidden w-full md:block md:w-auto font-workSans">
         <ul class="font-medium flex flex-col p-4 md:p-0 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white">
           <li>
             <a href="#" class="block md:bg-transparent md:text-blue-700 md:p-0 dark:text-white " aria-current="page">Home</a>
@@ -76,23 +76,57 @@
             </div>
     </div>
 
+    <div class="bg-white font-workSans flex flex-row md:px-32 md:h-[110vh]">
+        <div class="w-full h-full pl-10 flex flex-col items-start justify-center md:pl-16 md:pr-24">
+            <p class="md:text-2xl md:mb-1">Projects</p>
+            <p class="md:text-base md:mb-4">Some of the projects I've worked on are:</p>
+
+            <div class="flex flex-row w-full justify-around md:mb-8">
+                <div class="flex flex-col items-center static">
+                    <a href="https://www.youtube.com/watch?v=ATd9d_0P5y8" target="_blank" class="block">
+                        <img src="apple.png" class="md:w-72 md:h-72 block transition hover:-translate-x-1 duration-300 hover:scale-110 hover:cursor-pointer static">
+                    </a>
+                    <p class="md:text-2xl static md:mt-4">Clockwork</p>
+                    <p class="md:text-sm md:w-72 md:text-wrap text-center static">Designed and coded a SwiftUI routine-tracker app.</p>
+                </div>
+                <div class="flex flex-col items-center static">
+                    <a href="https://www.youtube.com/watch?v=ATd9d_0P5y8" target="_blank" class="block">
+                        <img src="apple.png" class="md:w-72 md:h-72 block transition hover:-translate-x-1 duration-300 hover:scale-110 hover:cursor-pointer static">
+                    </a>
+                    <p class="md:text-2xl static md:mt-4">Leafy</p>
+                    <p class="md:text-sm md:w-72 md:text-wrap text-center static">Designed desktop and mobile version of fake company's website.</p>
+                </div>
+            </div>
+
+            <p class="md:text-2xl md:mb-1">Other</p>
+            <p class="md:text-base md:mb-12"></p>
+        </div>
+    </div>
+
     <!-- contact  -->
-    <div class="bg-white font-workSans flex flex-row md:px-24 md:h-[40vh]">
-        <div class="w-[100vw] h-full ml-20 pl-10 flex flex-col items-start justify-center md:pl-16 md: pr-24">
+    <div class="bg-white font-workSans flex md:px-32 md:h-[40vh]">
+        <div class="w-[100vw] h-full ml-20 flex flex-col items-start justify-center md:pl-16 md:pr-24">
             <p class="md:text-2xl md:mb-3">Contact</p>
             <div class="w-full flex flex-row justify-between items-center md:pr-4">
                 <div class="flex flex-row items-center md:gap-4">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path d="M20 3H4a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zM8.339 18.337H5.667v-8.59h2.672v8.59zM7.003 8.574a1.548 1.548 0 1 1 0-3.096 1.548 1.548 0 0 1 0 3.096zm11.335 9.763h-2.669V14.16c0-.996-.018-2.277-1.388-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248h-2.667v-8.59h2.56v1.174h.037c.355-.675 1.227-1.387 2.524-1.387 2.704 0 3.203 1.778 3.203 4.092v4.71z"></path></svg>
+                    <a href="https://www.linkedin.com/in/eliana-wang-b335a7218/" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path d="M20 3H4a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zM8.339 18.337H5.667v-8.59h2.672v8.59zM7.003 8.574a1.548 1.548 0 1 1 0-3.096 1.548 1.548 0 0 1 0 3.096zm11.335 9.763h-2.669V14.16c0-.996-.018-2.277-1.388-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248h-2.667v-8.59h2.56v1.174h.037c.355-.675 1.227-1.387 2.524-1.387 2.704 0 3.203 1.778 3.203 4.092v4.71z"></path></svg>
+                    </a>
                     <p>Eliana Wang</p>
                 </div>
 
                 <div class="md:pl-4 flex flex-row items-center md:gap-4">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path d="m18.73 5.41-1.28 1L12 10.46 6.55 6.37l-1.28-1A2 2 0 0 0 2 7.05v11.59A1.36 1.36 0 0 0 3.36 20h3.19v-7.72L12 16.37l5.45-4.09V20h3.19A1.36 1.36 0 0 0 22 18.64V7.05a2 2 0 0 0-3.27-1.64z"></path></svg>
+                    <a href="mailto:ewanginspiration@gmail.com" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path d="m18.73 5.41-1.28 1L12 10.46 6.55 6.37l-1.28-1A2 2 0 0 0 2 7.05v11.59A1.36 1.36 0 0 0 3.36 20h3.19v-7.72L12 16.37l5.45-4.09V20h3.19A1.36 1.36 0 0 0 22 18.64V7.05a2 2 0 0 0-3.27-1.64z"></path></svg>
+                    </a>
+                    
                     <p>ewanginspiration@gmail.com</p>
                 </div>
 
                 <div class="md:pl-4 flex flex-row items-center md:gap-4">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336 9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2z"></path></svg>
+                    <a href="https://github.com/elianabean" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336 9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2z"></path></svg>
+                    </a>
                     <p>elianabean</p>
                 </div>
             </div>
