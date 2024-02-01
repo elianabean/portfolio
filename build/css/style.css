@@ -472,18 +472,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   position: static;
 }
 
-.fixed {
-  position: fixed;
-}
-
-.absolute {
-  position: absolute;
-}
-
-.relative {
-  position: relative;
-}
-
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -577,6 +565,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   max-width: 1280px;
 }
 
+.list-inside {
+  list-style-position: inside;
+}
+
+.list-disc {
+  list-style-type: disc;
+}
+
 .flex-row {
   flex-direction: row;
 }
@@ -627,16 +623,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   align-self: flex-start;
 }
 
+.scroll-smooth {
+  scroll-behavior: smooth;
+}
+
 .rounded-lg {
   border-radius: 0.5rem;
 }
 
 .rounded-full {
   border-radius: 9999px;
-}
-
-.border-8 {
-  border-width: 8px;
 }
 
 .border-t {
@@ -813,10 +809,6 @@ Ensure the default browser behavior of the `hidden` attribute.
     margin-bottom: 2rem;
   }
 
-  .md\:mt-76 {
-    margin-top: 304px;
-  }
-
   .md\:mb-12 {
     margin-bottom: 3rem;
   }
@@ -825,8 +817,12 @@ Ensure the default browser behavior of the `hidden` attribute.
     margin-bottom: 0.75rem;
   }
 
-  .md\:mt-10 {
-    margin-top: 2.5rem;
+  .md\:mt-16 {
+    margin-top: 4rem;
+  }
+
+  .md\:ml-10 {
+    margin-left: 2.5rem;
   }
 
   .md\:mt-6 {
@@ -845,8 +841,8 @@ Ensure the default browser behavior of the `hidden` attribute.
     height: 70vh;
   }
 
-  .md\:h-\[90vh\] {
-    height: 90vh;
+  .md\:h-\[110vh\] {
+    height: 110vh;
   }
 
   .md\:h-72 {
@@ -857,24 +853,8 @@ Ensure the default browser behavior of the `hidden` attribute.
     height: 40vh;
   }
 
-  .md\:h-\[100vh\] {
-    height: 100vh;
-  }
-
-  .md\:h-\[110vh\] {
-    height: 110vh;
-  }
-
-  .md\:h-\[120vh\] {
-    height: 120vh;
-  }
-
-  .md\:h-\[220vh\] {
-    height: 220vh;
-  }
-
-  .md\:h-\[20vh\] {
-    height: 20vh;
+  .md\:h-full {
+    height: 100%;
   }
 
   .md\:w-auto {
@@ -883,6 +863,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .md\:w-full {
     width: 100%;
+  }
+
+  .md\:w-128 {
+    width: 32rem;
   }
 
   .md\:w-72 {
@@ -946,6 +930,30 @@ Ensure the default browser behavior of the `hidden` attribute.
     padding-left: 1rem;
   }
 
+  .md\:pl-10 {
+    padding-left: 2.5rem;
+  }
+
+  .md\:pr-10 {
+    padding-right: 2.5rem;
+  }
+
+  .md\:pr-20 {
+    padding-right: 5rem;
+  }
+
+  .md\:pr-32 {
+    padding-right: 8rem;
+  }
+
+  .md\:pr-48 {
+    padding-right: 12rem;
+  }
+
+  .md\:pr-36 {
+    padding-right: 9rem;
+  }
+
   .md\:text-left {
     text-align: left;
   }
@@ -968,6 +976,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   .md\:text-sm {
     font-size: 0.875rem;
     line-height: 1.25rem;
+  }
+
+  .md\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
   }
 
   .md\:leading-8 {
