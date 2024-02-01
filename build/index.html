@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,13 +27,13 @@
       <div class="hidden w-full md:block md:w-auto font-workSans">
         <ul class="font-medium flex flex-col p-4 md:p-0 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white">
           <li>
-            <a href="#" class="block md:bg-transparent md:text-blue-700 md:p-0 dark:text-white " aria-current="page">Home</a>
+            <a href="#about" class="block md:bg-transparent md:text-blue-700 md:p-0 dark:text-white " aria-current="page">About</a>
           </li>
           <li>
-            <a href="#" class="block md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 md:dark:hover:bg-transparent">Projects</a>
+            <a href="#projects" class="block md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 md:dark:hover:bg-transparent">Projects</a>
           </li>
           <li>
-            <a href="#" class="block md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 md:dark:hover:bg-transparent">Contact</a>
+            <a href="#contact" class="block md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 md:dark:hover:bg-transparent">Contact</a>
           </li>
         </ul>
       </div>
@@ -41,9 +41,10 @@
   </nav>
   
     <!-- section 1 -->
-    <div class="bg-white font-workSans">
+    <div id="home" class="bg-white font-workSans">
         <div class="flex flex-row">
             <div class="w-[50vw] h-[100vh] ml-20 pl-10 flex flex-col items-center justify-center">
+                <div class=""></div>
                 <p class="md:mb-0 md:ml-4 md:text-left md:w-full md:leading-8 md:tracking-tighter">Hey, I'm</p>
                 <p class="md:mb-4 md:ml-0 md:text-left md:w-full md:text-7xl">Eliana Wang</p>
                 <div class="self-start text-left border-t border-black h-px w-full ml-0"></div>
@@ -58,14 +59,14 @@
                 </div>
 
                 <div class="flex flex-col justify-center">
-                    <img src="images/me and cat.jpeg" class="object-cover w-56 h-60 rounded-lg">
+                    <img src="images/oreo cat.jpeg" class="object-cover w-56 h-60 rounded-lg">
                 </div>
 
             </div>
         </div>
         
     <!-- about -->
-    <div class="bg-white font-workSans flex flex-row md:px-24 md:h-[70vh]">
+    <div id="about" class="bg-white font-workSans flex flex-row md:px-24 md:h-[70vh]">
             <div class="w-[50vw] h-full flex flex-col items-center justify-center ">
                 <img src="images/headshot.jpeg" class="rounded-full object-cover w-72 h-72">
             </div>
@@ -76,35 +77,46 @@
             </div>
     </div>
 
-    <div class="bg-white font-workSans flex flex-row md:px-32 md:h-[110vh]">
+    <!-- projects -->
+    <div id="projects" class="bg-white font-workSans flex flex-row md:px-32 md:h-full">
         <div class="w-full h-full pl-10 flex flex-col items-start justify-center md:pl-16 md:pr-24">
             <p class="md:text-2xl md:mb-1">Projects</p>
             <p class="md:text-base md:mb-4">Some of the projects I've worked on are:</p>
 
-            <div class="flex flex-row w-full justify-around md:mb-8">
+            <div class="flex flex-col w-full md:mb-8">
                 <div class="flex flex-col items-center static">
                     <a href="https://www.youtube.com/watch?v=ATd9d_0P5y8" target="_blank" class="block">
-                        <img src="apple.png" class="md:w-72 md:h-72 block transition hover:-translate-x-1 duration-300 hover:scale-110 hover:cursor-pointer static">
+                        <img src="images/clockwork preview.png" class="md:w-128 md:h-72 block transition hover:-translate-x-1 duration-300 hover:scale-110 hover:cursor-pointer static">
                     </a>
                     <p class="md:text-2xl static md:mt-4">Clockwork</p>
-                    <p class="md:text-sm md:w-72 md:text-wrap text-center static">Designed and coded a SwiftUI routine-tracker app.</p>
+                    <p class="md:text-sm md:w-72 md:text-wrap text-center static md:mb-8">Designed and coded a SwiftUI routine-tracker app.</p>
                 </div>
                 <div class="flex flex-col items-center static">
-                    <a href="https://www.youtube.com/watch?v=ATd9d_0P5y8" target="_blank" class="block">
-                        <img src="apple.png" class="md:w-72 md:h-72 block transition hover:-translate-x-1 duration-300 hover:scale-110 hover:cursor-pointer static">
+                    <a href="https://leafy-szhanggg.vercel.app/" target="_blank" class="block">
+                        <img src="images/leafy preview.png" class="md:w-full md:h-72 block transition hover:-translate-x-1 duration-300 hover:scale-110 hover:cursor-pointer static">
                     </a>
                     <p class="md:text-2xl static md:mt-4">Leafy</p>
-                    <p class="md:text-sm md:w-72 md:text-wrap text-center static">Designed desktop and mobile version of fake company's website.</p>
+                    <p class="md:text-sm md:w-72 md:text-wrap text-center static md:mb-8">Designed desktop and mobile version of fake company's website.</p>
                 </div>
             </div>
 
             <p class="md:text-2xl md:mb-1">Other</p>
-            <p class="md:text-base md:mb-12"></p>
+            <ul class="md:text-base md:mb-12 md:pl-10">
+                <li class="md:text-lg list-disc list-inside">
+                    <a href="https://github.com/elianabean/gnome-home-crisis-kaggle" target="_blank">Gnome Home Crisis (2023)</a>
+                    <p class="md:text-base md:ml-4 md:pr-36">Analyzed public sentiment on the climate crisis using Python, Pandas, and Matplotlib on The Reddit Climate Change Dataset. Using “spacy” library for language processing and “nltk” library for removing stop words.</p>
+                </li>
+
+                <li class="md:text-lg list-disc list-inside md:mt-4">
+                    <a href="#">LED Colors and Optical Infiltration of Air-Gapped Computers (2022)</a>
+                    <p class="md:text-base md:ml-4">Headed a team to research the vulnerabilities of air-gapped computers to an optical infiltration method, LaserShark. Identified which LED colors on air-gapped computers are more vulnerable to infiltration. Built a simplified setup of LaserShark infiltration and simulated an attack on an air-gapped computer using a Raspberry Pi and an Arduino.</p>
+                </li>
+            </ul>
         </div>
     </div>
 
     <!-- contact  -->
-    <div class="bg-white font-workSans flex md:px-32 md:h-[40vh]">
+    <div id="contact" class="bg-white font-workSans flex md:px-32 md:h-[40vh]">
         <div class="w-[100vw] h-full ml-20 flex flex-col items-start justify-center md:pl-16 md:pr-24">
             <p class="md:text-2xl md:mb-3">Contact</p>
             <div class="w-full flex flex-row justify-between items-center md:pr-4">
