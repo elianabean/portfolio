@@ -8,6 +8,11 @@ module.exports = {
 
       fontFamily: {
         workSans: ["Work Sans", "sans-serif"],
+      }, 
+
+      width: {
+        '92': '23rem',
+        '128': '32rem',
       }
 
       
