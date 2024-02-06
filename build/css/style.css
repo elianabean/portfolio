@@ -617,6 +617,18 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 80vh;
 }
 
+.h-\[70vh\] {
+  height: 70vh;
+}
+
+.h-\[72vh\] {
+  height: 72vh;
+}
+
+.h-\[60vh\] {
+  height: 60vh;
+}
+
 .w-full {
   width: 100%;
 }
