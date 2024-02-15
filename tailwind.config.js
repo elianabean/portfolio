@@ -41,8 +41,8 @@ module.exports = {
         'fade-in-down': '1.5s fade-in-down ease-out',
         'fade-in-down2': '1s fade-in-down ease-out',
         'fade-in-down3': '4s fade-in-down ease-out',
-        floating: '4s floating infinite',
-        floating2: '4s floating 0.5s infinite',
+        floating: '4s floating 2s infinite',
+        floating2: '4s floating 2.5s infinite',
     },
 
       fontFamily: {

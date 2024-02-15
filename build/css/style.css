@@ -667,8 +667,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .animate-floating {
-  -webkit-animation: 4s floating infinite;
-          animation: 4s floating infinite;
+  -webkit-animation: 4s floating 2s infinite;
+          animation: 4s floating 2s infinite;
 }
 
 @keyframes floating {
@@ -682,8 +682,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .animate-floating2 {
-  -webkit-animation: 4s floating 0.5s infinite;
-          animation: 4s floating 0.5s infinite;
+  -webkit-animation: 4s floating 2.5s infinite;
+          animation: 4s floating 2.5s infinite;
 }
 
 .list-inside {
