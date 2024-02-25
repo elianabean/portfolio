@@ -1,5 +1,5 @@
 module.exports = {
-  content: ['./build/*.html'],
+  content: ['./build/**/*.{html,js}'],
   theme: {
     extend: {
       spacing: {
@@ -40,9 +40,9 @@ module.exports = {
         wiggle: 'wiggle 1s ease-in-out infinite',
         'fade-in-down': '1.5s fade-in-down ease-out',
         'fade-in-down2': '1s fade-in-down ease-out',
-        'fade-in-down3': '4s fade-in-down ease-out',
-        floating: '4s floating 2s infinite',
-        floating2: '4s floating 2.5s infinite',
+        'fade-in-down3': '3s fade-in-down ease-out',
+        floating: '4s floating 3s infinite',
+        floating2: '4s floating 3.5s infinite',
     },
 
       fontFamily: {
