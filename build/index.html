@@ -13,6 +13,9 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
 <script src="https://unpkg.com/scrollreveal"></script>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
 </head>
 <body>
 
@@ -42,20 +45,20 @@
   
     <!-- section 1 -->
     <div id="home" class="bg-white font-workSans">
-        <div class="flex flex-row">
-            <div class="h-[60vh] px-10 md:w-[50vw] md:h-[100vh] md:ml-20 md:pl-10 flex flex-col items-center justify-center">
+        <div class="flex flex-row justify-center">
+            <div class="h-[60vh] px-16 md:w-[50vw] md:h-[80vh] md:ml-20 md:pl-10 flex flex-col items-center justify-center">
                 <div class=""></div>
-                <p class="md:mb-0 md:ml-4 md:text-left md:w-full md:leading-8 md:tracking-tighter animate-fade-in-down2">Hey, I'm</p>
-                <p class="md:mb-4 md:ml-0 md:text-left md:w-full md:text-7xl text-4xl mb-2 animate-fade-in-down">Eliana Wang</p>
-                <div class="self-start text-left border-t border-black h-px w-full ml-0 animate-fade-in-down"></div>
+                <p class="text-center md:mb-0 md:ml-4 md:text-left md:w-full md:leading-8 md:tracking-tighter animate-fade-in-down2">Hey, I'm</p>
+                <p class="text-center md:mb-4 md:ml-0 md:text-left md:w-full md:text-7xl text-4xl mb-2 animate-fade-in-down">Eliana Wang</p>
+                <div class="text-center self-start md:text-left border-t border-black h-px w-full ml-0 animate-fade-in-down"></div>
                 <p class="md:mt-4 md:ml-4 md:text-left md:w-full text-base mt-2 text-center animate-fade-in-down">Cybersecurity, website development, and math enthusiast.</p>
             </div>
 
-            <div class="hidden md:flex first-letter:w-[50vw] h-[100vh] mr-20 flex flex-row justify-center gap-16">
+            <div class="hidden md:flex first-letter:w-[50vw] h-[80vh] md:mr-20 flex flex-row justify-center gap-16">
                 <div class="flex flex-col justify-center gap-20">
-                    <img src="images/cat1.jpeg" class="rounded-lg object-cover w-56 h-60 animate-floating">
+                    <img src="images/cat1.jpeg" class="rounded-lg object-cover w-48 h-52 animate-floating">
 
-                    <img src="images/2cats.jpeg" class="object-cover w-56 h-60 rounded-lg animate-floating">
+                    <img src="images/2cats.jpeg" class="object-cover w-48 h-52 rounded-lg animate-floating">
                 </div>
 
                 <div class="flex flex-col justify-center">
@@ -66,29 +69,28 @@
         </div>
         
     <!-- about -->
-    <div id="trigger1" class="space-x-0"></div>
     <div id="about" class="bg-white font-workSans flex flex-col items-center md:flex-row md:px-24 md:h-[100vh] visible">
             <div class="w-[50vw] h-full flex flex-col items-center justify-center">
-                <img src="images/headshot.jpeg" class="rounded-full object-cover w-72 h-48 md:h-72 headshot">
+                <img src="images/headshot.jpeg" class="rounded-full object-cover w-48 h-48 md:w-72 md:h-72 headshot">
             </div>
 
             <div class="box green"></div>
 
-            <div class="md:w-[50vw] mt-2 md:mt-0 mx-14 h-full md:pl-10 flex flex-col items-start justify-center md:pl-16 md:pr-24">
+            <div class="md:w-[50vw] mt-2 md:mt-0 h-full md:pl-10 flex flex-col items-start justify-center md:pl-16 md:pr-16">
                 <p class="md:text-2xl md:mb-1 w-full text-center mb-1 text-2xl">About</p>
                 <p class="md:text-base text-center">Hello! I am Eliana Wang, a sophomore in the STEM Magnet Program at Montgomery Blair High School. I am interested in computer science and math. In my free time, I like to play volleyball, watch Netflix, and listen to music.</p>
             </div>
     </div>
 
     <!-- projects -->
-    <div id="projects" class="bg-white font-workSans flex flex-row md:px-32 md:h-[100vh]' mt-10 md:mt-0">
-        <div class="md:w-full mx-10 md:mx-0 h-full md:pl-10 flex flex-col items-start justify-center md:pl-16 md:pr-24">
+    <div id="projects" class="bg-white font-workSans flex flex-row px-8 md:px-24 md:h-[100vh]' mt-20 md:mt-0 " data-aos="fade-up" data-aos-duration="2000">
+        <div class="md:w-full mx-10 md:mx-0 h-full md:pl-10 flex flex-col items-start justify-center md:pl-16 md:pr-16">
             <p class="md:text-2xl md:mb-1 w-full md:text-left text-center mb-1 text-2xl">Projects</p>
             <p class="md:text-base md:mb-4 text-center md:text-left mb-4">Some of the projects I've worked on are:</p>
 
-            <div class="flex flex-col md:flex-row w-full md:mb-8 md:justify-between">
+            <div class="flex flex-col lg:flex-row w-full md:mb-8 lg:justify-between items-center">
                 <a href="https://www.youtube.com/watch?v=ATd9d_0P5y8" target="_blank" class="block">
-                    <div class="mb-10 md:mb-0 flex flex-col md:w-128 items-center static bg-gray-100 transition hover:-translate-x-1 duration-300 hover:scale-110 hover:cursor-pointer">
+                    <div class="w-auto mb-10 md:mb-0 flex flex-col md:w-128 items-center static bg-gray-100 transition hover:-translate-x-1 duration-300 hover:scale-110 hover:cursor-pointer">
                         <img src="images/clockwork preview.png" class="md:w-128 md:h-72 block static">
                         <p class="md:text-2xl static mt-4 text-xl">Clockwork</p>
                         <p class="px-6 mb-4 md:px-0 text-sm md:w-72 md:text-wrap text-center static md:mb-8">Designed and coded a SwiftUI routine-tracker app.</p>
