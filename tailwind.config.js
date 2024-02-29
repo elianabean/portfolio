@@ -5,6 +5,10 @@ module.exports = {
       spacing: {
         '76': '304px',
       },
+      colors: {
+        'dark-blue' : '#0A2472',
+        'grey': '#444444',
+      },
 
       keyframes: {
         wiggle: {
