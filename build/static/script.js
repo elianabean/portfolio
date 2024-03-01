@@ -35,5 +35,3 @@ mm.add("(min-width: 800px)", () => {
     });
 
   });
-
-/*ScrollReveal().reveal('#about', { delay: 300, duration: 500});*/
