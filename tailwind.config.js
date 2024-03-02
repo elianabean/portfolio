@@ -1,4 +1,5 @@
 module.exports = {
+  darkMode: 'class',
   content: ['./build/**/*.{html,js}'],
   theme: {
     extend: {
@@ -8,6 +9,7 @@ module.exports = {
       colors: {
         'dark-blue' : '#0A2472',
         'grey': '#444444',
+        'very-dark-blue': '#03002e',
       },
 
       keyframes: {
@@ -39,6 +41,15 @@ module.exports = {
             transform: 'translateY(-10px)'
         },
       },
+
+      expand: {
+        '0%': {
+          width: '0'
+        },
+        '100%': {
+            width: '100%'
+        },
+      },
     },
     animation: {
         wiggle: 'wiggle 1s ease-in-out infinite',
@@ -47,6 +58,7 @@ module.exports = {
         'fade-in-down3': '3s fade-in-down ease-out',
         floating: '4s floating 3s infinite',
         floating2: '4s floating 3.5s infinite',
+        expand: '2s expand',
     },
 
       fontFamily: {
