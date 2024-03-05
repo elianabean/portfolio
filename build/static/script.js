@@ -39,6 +39,7 @@ mm.add("(min-width: 800px)", () => {
 /*https://www.typeitjs.com/ */
 new TypeIt("#name", {
     speed: 100,
+    startDelay: 2000,
     waitUntilVisible: true,
     afterComplete: function (instance) {
         instance.destroy();
@@ -62,7 +63,6 @@ if (lightSwitches.length > 0) {
         }
       });
       if (lightSwitch.checked) {
-        console.log("checked");
         document.documentElement.classList.add('dark');
         localStorage.setItem('dark-mode', true);
       } else {
@@ -72,3 +72,22 @@ if (lightSwitches.length > 0) {
     });
   });
 }
+
+//clip animations
+gsap.from(".clip-top, .clip-bottom", 2, {
+  delay: 1,
+  height: "50vh",
+  ease: "power4.inOut",
+})
+
+gsap.to(".clip-top", 2, {
+  delay: 4,
+  clipPath: "inset(0 0 100% 0)",
+  ease: "power4.inOut",
+})
+
+gsap.to(".clip-bottom", 2, {
+  delay: 4,
+  clipPath: "inset(100% 0 0 0)",
+  ease: "power4.inOut",
+})

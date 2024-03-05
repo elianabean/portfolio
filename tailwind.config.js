@@ -3,6 +3,11 @@ module.exports = {
   content: ['./build/**/*.{html,js}'],
   theme: {
     extend: {
+      dropShadow: {
+        'full-black': '0px 0px 10px rgba(0, 0, 0, 0.25)',
+        'full-white': '0px 0px 10px rgba(255, 255, 255, 1)',
+      },
+
       spacing: {
         '76': '304px',
       },
@@ -50,6 +55,12 @@ module.exports = {
             width: '100%'
         },
       },
+
+      drawBorder: {
+        to: {
+          strokeDashoffset: '1000'
+        },
+      },
     },
     animation: {
         wiggle: 'wiggle 1s ease-in-out infinite',
@@ -59,10 +70,11 @@ module.exports = {
         floating: '4s floating 3s infinite',
         floating2: '4s floating 3.5s infinite',
         expand: '2s expand',
-    },
+        },
 
       fontFamily: {
-        workSans: ["Work Sans", "sans-serif"],
+        playfairDisplay: ["Playfair Display", "serif"],
+        montserrat: ["Montserrat", "sans-serif"],
       }, 
 
       width: {

@@ -6,9 +6,15 @@
     <title>Document</title>
     <link rel="icon" type="image/x-icon" href="images/E2.png">
     <link rel="stylesheet" href="css/style.css">
+    <!-- playfair display font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+<!-- montserrat font-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
@@ -26,25 +32,209 @@
     </script>
 
 </head>
-<body>
-    <nav class="bg-white dark:bg-very-dark-blue backdrop-blur-sm dark:bg-opacity-100 bg-opacity-90 z-50 sticky top-0">
+<body class="overflow-x-hidden">
+  
+  <!-- code from https://www.geeksforgeeks.org/how-to-create-border-animation-using-css/ -->
+    <style>
+        .geeks::before { 
+    content: ""; 
+    position: absolute; 
+    top: -2px; 
+    left: -2px; 
+    width: 0; 
+    height: 0; 
+    background: transparent; 
+    border: 2px solid transparent; 
+} 
+ 
+.geeks::before { 
+    animation: animate 1s 3.5s linear forwards; 
+}
+@media (prefers-color-scheme: dark) {
+    .geeks {
+        background-color:red;
+    }
+    .geeks::before { 
+        
+        animation: animate-dark 1s 3.5s linear forwards; 
+    }
+}
+ 
+@keyframes animate { 
+    0% { 
+        width: 0; 
+        height: 0; 
+        border-top-color: black; 
+        border-right-color: transparent; 
+        border-bottom-color: transparent; 
+        border-left-color: transparent; 
+    } 
+ 
+    50% { 
+        width: 100%; 
+        height: 0; 
+        border-top-color: black; 
+        border-right-color: black; 
+        border-bottom-color: transparent; 
+        border-left-color: transparent; 
+    } 
+ 
+    100% { 
+        width: 100%; 
+        height: 100%; 
+        border-top-color: black; 
+        border-right-color: black; 
+        border-bottom-color: transparent; 
+        border-left-color: transparent; 
+    } 
+} 
+
+@keyframes animate-dark { 
+    0% { 
+        width: 0; 
+        height: 0; 
+        border-top-color: white; 
+        border-right-color: transparent; 
+        border-bottom-color: transparent; 
+        border-left-color: transparent; 
+    } 
+ 
+    50% { 
+        width: 100%; 
+        height: 0; 
+        border-top-color: white; 
+        border-right-color: white; 
+        border-bottom-color: transparent; 
+        border-left-color: transparent; 
+    } 
+ 
+    100% { 
+        width: 100%; 
+        height: 100%; 
+        border-top-color: white; 
+        border-right-color: white; 
+        border-bottom-color: transparent; 
+        border-left-color: transparent; 
+    } 
+} 
+
+.geeks::after { 
+    content: ""; 
+    position: absolute; 
+    top: -2px; 
+    left: -2px; 
+    width: 0; 
+    height: 0; 
+    background: transparent; 
+    border: 2px solid transparent; 
+} 
+ 
+.geeks::after { 
+    animation: animates 1s 3.5s linear forwards; 
+}
+ 
+@keyframes animates { 
+    0% { 
+        width: 0; 
+        height: 0; 
+        border-top-color: transparent; 
+        border-right-color: transparent; 
+        border-bottom-color: transparent; 
+        border-left-color: black; 
+    } 
+ 
+    50% { 
+        width: 0; 
+        height: 100%; 
+        border-top-color: transparent; 
+        border-right-color: transparent; 
+        border-bottom-color: black; 
+        border-left-color: black; 
+    } 
+ 
+    100% { 
+        width: 100%; 
+        height: 100%; 
+        border-top-color: transparent; 
+        border-right-color: transparent; 
+        border-bottom-color: black; 
+        border-left-color: black; 
+    } 
+} 
+
+    /*for the clip animations:*/
+    .loader {
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .loader-clip {
+        position: absolute;
+        width: 100vw;
+        height: 33.3vh;
+        overflow: clip;
+        z-index: 10000;
+    }
+
+    .clip-top {
+        top: 0;
+        clip-path: inset(0 0 0 0);
+        background: #000;
+        
+    }
+
+    .clip-bottom {
+        bottom: 0;
+        clip-path: inset(0 0 0 0);
+        background: #000;
+    }
+
+    .clip-center {
+        overflow:hidden;
+        position:relative;
+        width:100vw;
+        height: 33.3vh;
+        top: 33.3vh;
+    }
+    </style>
+
+    <!-- section 0 -->
+    <div class="loader dark:bg-[#121212]">
+        <div class="loader-clip clip-top">
+
+        </div>
+        
+        <div class="loader-clip clip-bottom">
+            
+        </div>
+
+        <div class="clip-center flex flex-col justify-center dark:bg-[#121212]">
+            <div class="flex flex-row items-center justify-center w-[100vw]"> 
+                <div class="absolute flex flex-col items-center p-8 geeks before:content-[''] before:absolute before:bg-transparent before:border-[2px] before:border-solid before:border-transparent before:top-[-2px] before:left-[-2px] before:w-0 before:h-0 before:animate-growBorder dark:before:border-white dark:border-white">
+                    <p class="relative w-full text-7xl font-playfairDisplay font-bold dark:text-white" id="name">eliana wang</p>
+                </div>
+            </div>
+        </div>        
+    </div>
+
+    <nav class="bg-white dark:bg-[#121212] backdrop-blur-sm dark:bg-opacity-100 bg-opacity-90 z-50 absolute top-0 w-[100vw]">
         <!-- nav bar code from https://flowbite.com/docs/components/navbar/-->
     <div class="max-w-screen-xl flex justify-center py-6 w-full items-center md:justify-between md:mx-auto md:p-4">
       <a href="#" class="flex items-center md:space-x-3">
-          <p class="text-2xl font-semibold font-workSans text-black dark:text-white">Eliana Wang</p>
+          <p class="text-2xl font-semibold font-playfairDisplay text-black dark:text-white">Eliana Wang</p>
           
       </a>
 
-      <div class="hidden w-full md:block md:w-auto font-workSans">
+      <div class="hidden w-full md:block md:w-auto font-playfairDisplay">
         <ul class="font-medium flex flex-col p-4 md:p-0 md:flex-row md:space-x-8 md:mt-0 md:border-0">
           <li>
-            <a href="#about" class="leading-none block md:bg-transparent text-[#0A2472] md:p-0 dark:text-[#007dff] animate-fade-in-down3" aria-current="page">About</a>
+            <a href="#about" class="leading-none block md:bg-transparent text-[#0A2472] md:p-0 dark:text-[#007dff] animate-fade-in-down3" aria-current="page">about</a>
           </li>
           <li>
-            <a href="#projects" class="leading-none block md:border-0 text-[#222222] md:p-0 animate-fade-in-down3 dark:text-white">Projects</a>
+            <a href="#projects" class="leading-none block md:border-0 text-[#222222] md:p-0 animate-fade-in-down3 dark:text-white">projects</a>
           </li>
           <li>
-            <a href="#contact" class="leading-none block md:border-0 text-[#222222] md:p-0 animate-fade-in-down3 dark:text-white">Contact</a>
+            <a href="#contact" class="leading-none block md:border-0 text-[#222222] md:p-0 animate-fade-in-down3 dark:text-white">contact</a>
           </li>
           <li>
             <!-- from https://cruip.com/implementing-tailwind-css-dark-mode-toggle-with-no-flicker/ -->
@@ -65,81 +255,104 @@
       </div>
     </div>
   </nav>
+    
+    <div class="testBorder animation overflow-hidden relative ">
+    </div>
+
+    <!-- the svg animation
+    <div>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1"
+          stroke="rebeccapurple"
+          class="w-6 h-6"
+          >
+          <path
+class="animate-[drawBorder_35s_linear_infinite]"
+stroke-linecap="round"
+stroke-linejoin="round"
+d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
+/>
   
+        </svg>
+   </div>-->
+
     <!-- section 1 -->
     
-    <div id="home" class="bg-white dark:bg-very-dark-blue font-workSans">
+    <div id="home" class="bg-white dark:bg-[#121212] *:font-playfairDisplay">
         <div class="flex flex-row justify-center">
             <div class="h-[60vh] px-16 md:w-[50vw] md:h-[80vh] md:ml-20 md:pl-10 flex flex-col items-center justify-center">
                 <div class=""></div>
-                <p class="text-center md:mb-0 md:ml-4 md:text-left md:w-full md:leading-8 md:tracking-tightertext-[#444444] dark:text-white" data-aos="fade-down" data-aos-duration="2000">Hey, I'm</p>
-                <p class="text-center md:mb-4 md:ml-0 md:text-left md:w-full md:text-7xl text-4xl mb-2 font-bold dark:text-white"  data-aos="fade-down" data-aos-duration="2000" id="name">Eliana Wang</p>
+                <p class="text-center md:mb-0 md:ml-4 md:text-left md:w-full md:leading-8 md:tracking-tightertext-[#444444] dark:text-white font-montserrat" data-aos="fade-down" data-aos-duration="2000">Hey, I'm</p>
+                <p class="text-center md:mb-4 md:ml-0 md:text-left md:w-full md:text-7xl text-4xl mb-2 font-bold dark:text-white"  data-aos="fade-down" data-aos-duration="2000" >Eliana Wang</p>
                 
                 <div class="text-center self-start md:text-left border-t border-black dark:border-white h-px w-full ml-0 animate-expand"></div>
-                <p class="md:mt-4 md:ml-4 md:text-left md:w-full text-base mt-2 text-center text-[#444444] dark:text-white" data-aos="fade-up" data-aos-duration="2000">Cybersecurity, website development, and math enthusiast.</p>
+                <p class="md:mt-4 md:ml-4 md:text-left md:w-full text-base mt-2 text-center text-[#444444] dark:text-white font-montserrat" data-aos="fade-up" data-aos-duration="2000">Cybersecurity, website development, and math enthusiast.</p>
             </div>
 
-            <div class="md:flex first-letter:w-[50vw] h-[80vh] md:mr-20 flex flex-row justify-center gap-16">
+            <div class="md:flex first-letter:w-[50vw] h-[80vh] md:mr-20 flex flex-row justify-center gap-16 ">
                 <div class="flex flex-col justify-center gap-20">
-                    <img src="images/cat1.jpeg" class="rounded-lg object-cover w-48 h-52 animate-floating dark:brightness-[.85] dark:contrast-[.85]">
+                    <img src="images/cat1.jpeg" class="drop-shadow-full-black dark:drop-shadow-full-white rounded-lg object-cover w-48 h-52 animate-floating " style="">
 
-                    <img src="images/2cats.jpeg" class="object-cover w-48 h-52 rounded-lg animate-floating dark:brightness-[.85] dark:contrast-[.85]">
+                    <img src="images/2cats.jpeg" class="drop-shadow-full-black dark:drop-shadow-full-white object-cover w-48 h-52 rounded-lg animate-floating " >
                 </div>
 
                 <div class="flex flex-col justify-center">
-                    <img src="images/oreo cat.jpeg" class="object-cover w-56 h-60 rounded-lg animate-floating2 dark:brightness-[.85] dark:contrast-[.85]">
+                    <img src="images/oreo cat.jpeg" class="drop-shadow-full-black dark:drop-shadow-full-white object-cover w-56 h-60 rounded-lg animate-floating2" style="box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.15);">
                 </div>
 
             </div>
         </div>
         
     <!-- about -->
-    <div id="about" class="bg-white dark:bg-very-dark-blue font-workSans flex flex-col items-center md:flex-row md:px-16 md:justify-center md:h-[100vh] visible">
+    <div id="about" class="bg-white dark:bg-[#121212] font-playfairDisplay flex flex-col items-center md:flex-row md:px-16 md:justify-center md:h-[100vh] visible">
             <div class="w-fit h-full flex flex-col items-center justify-center md:mr-16">
-                <img src="images/headshot.jpeg" class="rounded-md object-cover w-48 h-48 md:w-[28rem] md:h-[28rem] headshot">
+                <img src="images/headshot.jpeg" class="drop-shadow-full-black rounded-full object-cover w-48 h-48 md:w-[20rem] md:h-[20rem] headshot">
             </div>
 
             <div class="box green"></div>
 
             <div class="w-[50vh] mt-2 md:mt-0 h-full flex flex-col lg:items-start items-center justify-center">
-                <p class="w-fit md:text-2xl md:mb-4 mb-2 text-2xl border-b-4 border-b-[#0A2472] dark:text-white dark:border-b-[#007dff]">About</p>
-                <span class="md:text-base text-center md:text-left text-[#444444] inline dark:text-white">Hello! I am Eliana Wang, a sophomore in the STEM Magnet Program at Montgomery Blair High School. I am interested in<span class="text-[#0A2472] dark:text-[#007dff] inline font-bold"> computer science</span> and <span class="text-[#0A2472] dark:text-[#007dff] inline font-bold">math</span>. In my free time, I like to play volleyball, watch Netflix, and listen to music.</span>
+                <p class="w-fit md:text-2xl md:mb-4 mb-2 text-4xl border-b-4 border-b-[#0A2472] dark:text-white dark:border-b-[#007dff]">Hello!</p>
+                <span class="md:text-base text-center md:text-left text-[#444444] inline dark:text-white font-montserrat">I am Eliana Wang, a sophomore in the STEM Magnet Program at Montgomery Blair High School. I am interested in<span class="text-[#0A2472] dark:text-[#007dff] inline font-bold"> computer science</span> and <span class="text-[#0A2472] dark:text-[#007dff] inline font-bold">math</span>. In my free time, I like to play volleyball, watch Netflix, and listen to music.</span>
             </div>
     </div>
 
     <!-- projects -->
-    <div id="projects" class="bg-white dark:bg-very-dark-blue font-workSans flex flex-row px-8 md:py-10 md:px-28 md:h-[100vh]' mt-20 md:mt-0">
+    <div id="projects" class="bg-white dark:bg-[#121212]  font-playfairDisplay flex flex-row px-8 md:pt-10 md:px-28 md:h-[100vh]' mt-20 md:mt-0">
         <div class="md:w-full mx-10 md:mx-0 h-full flex flex-col items-start justify-center md:px-16">
             
             <!-- Section Header code from https://www.youtube.com/watch?v=IJzuN5UGqmo  -->
             <p class="text-5xl md:text-[4.5rem] font-weight:800 md:mb-8 w-full text-center mb-1 opacity-[0.2] dark:opacity-80 bg-clip-text text-transparent bg-gradient-to-b from-dark-blue dark:from-white font-bold">Projects</p>
             <p class="md:text-[2.5rem] md:mb-8 w-full text-center mb-1 text-2xl mt-[-1.5rem] md:mt-[-4rem] font-bold text-dark-blue dark:text-white " data-aos="fade-up" data-aos-duration="2000">Projects</p>
 
-            <p class="w-full md:text-base md:mb-4 text-center lg:text-left mb-4 text-[#444444] dark:text-white" data-aos="fade-up" data-aos-duration="2000">Some of the projects I've worked on are:</p>
+            <p class="w-full md:text-base md:mb-4 text-center lg:text-left mb-4 text-[#444444] dark:text-white font-montserrat" data-aos="fade-up" data-aos-duration="2000">Some of the projects I've worked on are:</p>
 
             <div class="flex flex-col lg:flex-row w-full md:mb-8 lg:justify-between items-center " data-aos="zoom-in-up" data-aos-duration="2000">
                 <a href="https://www.youtube.com/watch?v=ATd9d_0P5y8" target="_blank" class="block">
-                    <div class="w-auto mb-10 lg:mb-0 flex flex-col md:w-128 items-center static bg-white dark:bg-very-dark-blue/10 drop-shadow-xl rounded-md transition hover:-translate-x-1 duration-300 hover:scale-110 hover:cursor-pointer dark:border-[0.5px] border-gray-500">
+                    <div class="w-auto mb-10 lg:mb-0 flex flex-col md:w-128 items-center static bg-white dark:bg-[#121212] /10 drop-shadow-xl rounded-md transition hover:-translate-x-1 duration-300 hover:scale-110 hover:cursor-pointer dark:border-[0.5px] border-gray-500">
                         <img src="images/clockwork preview.png" class="md:w-128 md:h-72 block static">
 
-                        <div class="w-full h-[25vh] flex flex-col items-center justify-center py-4 px-16">
+                        <div class="w-full h-[25vh] flex flex-col items-center justify-center py-4 px-16 ">
                             <p class="w-full md:text-2xl static text-xl font-bold text-dark-blue md:text-left dark:text-white">Clockwork</p>
-                            <p class="w-full text-grey md:text-left dark:text-white">2023</p>
+                            <p class="w-full text-grey md:text-left dark:text-white font-montserrat">2023</p>
                             <p class="my-2 w-full border-b-2"></p>
-                            <p class="w-full md:px-0 text-sm md:text-wrap md:text-left static text-[#333333] dark:text-white">Designed and coded a SwiftUI routine-tracker app.</p>
+                            <p class="w-full md:px-0 text-sm md:text-wrap md:text-left static text-[#333333] dark:text-white font-montserrat">Designed and coded a SwiftUI routine-tracker app.</p>
                         </div>
                     </div>
                 </a>
 
                 <a href="https://leafy-szhanggg.vercel.app/" target="_blank" class="block">
-                    <div class="w-auto mb-10 md:mb-0 flex flex-col md:w-128 items-center static bg-white drop-shadow-xl dark:bg-very-dark-blue rounded-md transition hover:-translate-x-1 duration-300 hover:scale-110 hover:cursor-pointer dark:border-[0.5px] border-gray-500">
+                    <div class="w-auto mb-10 md:mb-0 flex flex-col md:w-128 items-center static bg-white dark:bg-[#121212]  drop-shadow-xl dark:black rounded-md transition hover:-translate-x-1 duration-300 hover:scale-110 hover:cursor-pointer dark:border-[0.5px] border-gray-500">
                         <img src="images/leafy preview.png" class="md:w-full md:h-72 block static object-cover">
 
                         <div class="w-full h-[25vh] flex flex-col items-center justify-center py-4 px-16">
                             <p class="w-full md:text-2xl static text-xl font-bold text-dark-blue md:text-left dark:text-white">Leafy</p>
-                            <p class="w-full text-grey md:text-left dark:text-white">2023</p>
+                            <p class="w-full text-grey md:text-left dark:text-white font-montserrat">2023</p>
                             <p class="my-2 w-full border-b-2"></p>
-                            <p class="w-full md:px-0 text-sm md:text-wrap md:text-left static text-grey dark:text-white">Designed desktop and mobile version of fake company's website.</p>
+                            <p class="w-full md:px-0 text-sm md:text-wrap md:text-left static text-grey dark:text-white font-montserrat">Designed desktop and mobile version of fake company's website.</p>
                         </div>
                     </div>
                 </a>
@@ -148,28 +361,28 @@
             <p class="text-2xl mb-1 text-center md:text-left font-bold text-dark-blue dark:text-white">Other</p>
             <ul class="md:text-base md:pl-10 pl-4">
                 <li class="md:text-lg list-disc list-inside text-lg">
-                    <a href="https://github.com/elianabean/gnome-home-crisis-kaggle" target="_blank" class="text-[#222222] dark:text-white">Gnome Home Crisis (2023)</a>
-                    <p class="text-base md:ml-4 md:pr-36 text-[#444444] dark:text-white">Analyzed public sentiment on the climate crisis using Python, Pandas, and Matplotlib on The Reddit Climate Change Dataset. Using “spacy” library for language processing and “nltk” library for removing stop words.</p>
+                    <a href="https://github.com/elianabean/gnome-home-crisis-kaggle" target="_blank" class="text-[#222222] dark:text-white font-montserrat">Gnome Home Crisis (2023)</a>
+                    <p class="text-base md:ml-4 md:pr-36 text-[#444444] dark:text-white font-montserrat">Analyzed public sentiment on the climate crisis using Python, Pandas, and Matplotlib on The Reddit Climate Change Dataset. Using “spacy” library for language processing and “nltk” library for removing stop words.</p>
                 </li>
 
                 <li class="text-lg list-disc list-inside mt-4">
-                    <a href="#" class="text-[#222222] dark:text-white">LED Colors and Optical Infiltration of Air-Gapped Computers (2022)</a>
-                    <p class="text-base md:ml-4 text-[#444444] dark:text-white">Headed a team to research the vulnerabilities of air-gapped computers to an optical infiltration method, LaserShark. Identified which LED colors on air-gapped computers are more vulnerable to infiltration. Built a simplified setup of LaserShark infiltration and simulated an attack on an air-gapped computer using a Raspberry Pi and an Arduino.</p>
+                    <a href="#" class="text-[#222222] dark:text-white font-montserrat">LED Colors and Optical Infiltration of Air-Gapped Computers (2022)</a>
+                    <p class="text-base md:ml-4 text-[#444444] dark:text-white font-montserrat">Headed a team to research the vulnerabilities of air-gapped computers to an optical infiltration method, LaserShark. Identified which LED colors on air-gapped computers are more vulnerable to infiltration. Built a simplified setup of LaserShark infiltration and simulated an attack on an air-gapped computer using a Raspberry Pi and an Arduino.</p>
                 </li>
             </ul>
         </div>
     </div>
 
     <!-- contact  -->
-    <div id="contact" class="bg-white dark:bg-very-dark-blue font-workSans flex md:px-44 md:h-full ">
-        <div class="w-full h-full flex flex-col md:items-start items-center justify-center md:py-16 my-16">
-            <p class="md:text-2xl md:mb-3 text-2xl text-center font-bold text-dark-blue dark:text-white" data-aos="fade-right" data-aos-duration="2000" >Contact</p>
-            <div class="md:w-full flex lg:flex-row md:justify-between flex-col items-start md:pr-4" data-aos="fade-right" data-aos-delay="200" data-aos-duration="2000" data-aos-offset="0">
+    <div id="contact" class="bg-white dark:bg-[#121212]  font-playfairDisplay flex md:px-44 md:h-full ">
+        <div class="w-full h-full flex flex-col md:items-start items-center justify-center md:pb-16 md:pt-10 my-16">
+            <p class="md:text-2xl md:mb-3 text-2xl text-center font-bold text-dark-blue dark:text-white" data-aos="fade-right" data-aos-duration="2000" data-aos-offset="0">Contact</p>
+            <div class="md:w-full flex lg:flex-row md:justify-between flex-col items-start md:pr-4" data-aos="fade-right" data-aos-duration="2000" data-aos-offset="0">
                 <div class="flex flex-row items-center gap-4" >
                     <a href="https://www.linkedin.com/in/eliana-wang-b335a7218/" target="_blank">
                         <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 24 24" class="fill-[#0A2472] dark:fill-white" style="transform: ;msFilter:;"><path d="M20 3H4a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zM8.339 18.337H5.667v-8.59h2.672v8.59zM7.003 8.574a1.548 1.548 0 1 1 0-3.096 1.548 1.548 0 0 1 0 3.096zm11.335 9.763h-2.669V14.16c0-.996-.018-2.277-1.388-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248h-2.667v-8.59h2.56v1.174h.037c.355-.675 1.227-1.387 2.524-1.387 2.704 0 3.203 1.778 3.203 4.092v4.71z"></path></svg>
                     </a>
-                    <p class="text-sm md:text-base dark:text-white">Eliana Wang</p>
+                    <p class="text-sm md:text-base dark:text-white font-montserrat">Eliana Wang</p>
                 </div>
 
                 <div class="lg:pl-4 flex flex-row items-center gap-4">
@@ -177,14 +390,14 @@
                         <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 24 24" class="fill-[#0A2472] dark:fill-white" style="transform: ;msFilter:;"><path d="m18.73 5.41-1.28 1L12 10.46 6.55 6.37l-1.28-1A2 2 0 0 0 2 7.05v11.59A1.36 1.36 0 0 0 3.36 20h3.19v-7.72L12 16.37l5.45-4.09V20h3.19A1.36 1.36 0 0 0 22 18.64V7.05a2 2 0 0 0-3.27-1.64z"></path></svg>
                     </a>
                     
-                    <p class="text-sm md:text-base dark:text-white">ewanginspiration@gmail.com</p>
+                    <p class="text-sm md:text-base dark:text-white font-montserrat">ewanginspiration@gmail.com</p>
                 </div>
 
                 <div class="lg:pl-4 flex flex-row items-center gap-4">
                     <a href="https://github.com/elianabean" target="_blank">
                         <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 24 24" class="fill-[#0A2472] dark:fill-white" style="transform: ;msFilter:;"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336 9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2z"></path></svg>
                     </a>
-                    <p class="text-sm md:text-base dark:text-white">elianabean</p>
+                    <p class="text-sm md:text-base dark:text-white font-montserrat">elianabean</p>
                 </div>
             </div>
         </div>
