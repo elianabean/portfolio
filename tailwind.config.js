@@ -5,16 +5,17 @@ module.exports = {
     extend: {
       dropShadow: {
         'full-black': '0px 0px 10px rgba(0, 0, 0, 0.25)',
-        'full-white': '0px 0px 10px rgba(255, 255, 255, 1)',
+        'full-white': '0px 0px 12px rgba(255, 255, 255, 0.4)',
       },
 
       spacing: {
         '76': '304px',
       },
       colors: {
-        'dark-blue' : '#0A2472',
+        'dark-blue' : '#0e1b95',
         'grey': '#444444',
         'very-dark-blue': '#03002e',
+        'yellow': '#e6a129',
       },
 
       keyframes: {
