@@ -15,10 +15,25 @@ module.exports = {
         'dark-blue' : '#0e1b95',
         'grey': '#444444',
         'very-dark-blue': '#03002e',
-        'yellow': '#e6a129',
+        'yellow2': '#e6a129',
       },
 
       keyframes: {
+        blob: {
+          "0%": {
+            transform: "translate(0px, 0px) scale(1)"
+          },
+          "33%": {
+            transform: "translate(30px, -50px) scale(1.2)",
+          }, 
+          "66%": {
+            transform: "translate(-20px, 20px) scale(0.8)",
+          }, 
+          "100%": {
+            transform: "translate(0px, 0px) scale(1)",
+          }, 
+        },
+
         wiggle: {
             '0%, 100%': {
                 transform: 'rotate(-3deg)'
@@ -71,6 +86,7 @@ module.exports = {
         floating: '4s floating 3s infinite',
         floating2: '4s floating 3.5s infinite',
         expand: '2s expand',
+        blob: "blob 7s infinite",
         },
 
       fontFamily: {

@@ -44,13 +44,33 @@
       <div class="hidden w-full md:block md:w-auto font-playfairDisplay">
         <ul class="font-medium flex flex-col p-4 md:p-0 md:flex-row md:space-x-8 md:mt-0 md:border-0">
           <li>
-            <a href="#about" class="leading-none block md:bg-transparent text-dark-blue dark:text-yellow md:p-0" aria-current="page">about</a>
+            
+            <a href="#about" class="leading-none block md:bg-transparent text-[#222222] dark:text-white hover:text-dark-blue hover:dark:text-yellow2 md:p-0" aria-current="page">
+                <!-- from https://birdeatsbug.com/blog/creating-hover-effects-with-tailwind-css -->
+                <p class="relative group">
+                    <span>about</span>
+                    <span class="absolute -bottom-1 left-1/2 w-0 h-0.5 bg-dark-blue dark:bg-yellow2 group-hover:w-1/2 group-hover:transition-all duration-200 mt-0.5"></span>
+                    <span class="absolute -bottom-1 right-1/2 w-0 h-0.5 bg-dark-blue dark:bg-yellow2 group-hover:w-1/2 group-hover:transition-all duration-200 mt-0.5"></span>
+                </p>
+            </a>
           </li>
           <li>
-            <a href="#projects" class="leading-none block md:border-0 text-[#222222] md:p-0 dark:text-white">projects</a>
+            <a href="#projects" class="leading-none block md:border-0 md:p-0 text-[#222222] dark:text-white hover:text-dark-blue hover:dark:text-yellow2 ">
+                <p class="relative group">
+                    <span>projects</span>
+                    <span class="absolute -bottom-1 left-1/2 w-0 h-0.5 bg-dark-blue dark:bg-yellow2 group-hover:w-1/2 group-hover:transition-all duration-200 mt-0.5"></span>
+                    <span class="absolute -bottom-1 right-1/2 w-0 h-0.5 bg-dark-blue dark:bg-yellow2 group-hover:w-1/2 group-hover:transition-all duration-200 mt-0.5"></span>
+                </p>
+            </a>
           </li>
           <li>
-            <a href="#contact" class="leading-none block md:border-0 text-[#222222] md:p-0 dark:text-white">contact</a>
+            <a href="#contact" class="leading-none block md:border-0 md:p-0 text-[#222222] dark:text-white hover:text-dark-blue hover:dark:text-yellow2 ">
+                <p class="relative group">
+                    <span>contact</span>
+                    <span class="absolute -bottom-1 left-1/2 w-0 h-0.5 bg-dark-blue dark:bg-yellow2 group-hover:w-1/2 group-hover:transition-all duration-200 mt-0.5"></span>
+                    <span class="absolute -bottom-1 right-1/2 w-0 h-0.5 bg-dark-blue dark:bg-yellow2 group-hover:w-1/2 group-hover:transition-all duration-200 mt-0.5"></span>
+                </p>
+            </a>
           </li>
           <li>
             <!-- from https://cruip.com/implementing-tailwind-css-dark-mode-toggle-with-no-flicker/ -->
@@ -237,8 +257,8 @@
 
 
 
-    <!-- section 0 -->
-    <div class="loader dark:bg-[#121212] mt-[-10vh]">
+    <!-- section 0 -->    
+    <div class="bg-white loader dark:bg-[#121212] mt-[-10vh]">
         <div class="loader-clip clip-top">
 
         </div>
@@ -253,7 +273,7 @@
                     <p class="relative w-full text-2xl lg:text-7xl font-playfairDisplay font-bold dark:text-white" id="name">eliana wang</p>
                 </div>
             </div>
-        </div>        
+        </div>
     </div>
     
     <div class="testBorder animation overflow-hidden relative ">
@@ -280,7 +300,13 @@ d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.6
    </div>-->
 
     <!-- section 1 -->
-    
+    <!-- from https://www.youtube.com/watch?v=Tmkr2kKUEgU-->
+    <div class="relative w-full max-w-lg top-[10vh] md:ml-20">
+        <div class="absolute top-0 -right-4 w-72 h-72 bg-yellow-300  mix-blend-multiply rounded-full filter blur-xl opacity-30 animate-blob animation-delay-2000 dark:mix-blend-normal dark:opacity-10"></div>
+        <div class="absolute top-28 left-28 w-72 h-72 bg-blue-300  mix-blend-multiply rounded-full filter blur-xl opacity-30 animate-blob animation-delay-4000 dark:mix-blend-normal dark:opacity-10"></div>
+        <div class="absolute top-0 -left-4 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob dark:mix-blend-normal dark:opacity-10"></div>
+        
+    </div>
     <div id="home" class="bg-white dark:bg-[#121212] *:font-playfairDisplay">
         <div class="flex flex-row justify-center">
             <div class="h-[100vh] px-16 md:w-[50vw] md:h-[80vh] md:ml-20 md:pl-10 flex flex-col items-center justify-center">
@@ -315,8 +341,8 @@ d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.6
             <div class="box green"></div>
 
             <div class="w-[50vh] mt-2 md:mt-0 h-full flex flex-col lg:items-start items-center justify-center">
-                <p class="mt-4 md:mt-0 w-fit md:text-2xl md:mb-4 mb-2 text-4xl border-b-4 border-b-dark-blue dark:text-white dark:border-b-yellow ">Hello!</p>
-                <span class="px-4 md:px-0 md:text-base text-center md:text-left text-[#444444] inline dark:text-white font-montserrat">I am Eliana Wang, a sophomore in the STEM Magnet Program at Montgomery Blair High School. I am interested in various areas of<span class="text-dark-blue dark:text-yellow inline font-bold"> computer science</span> and <span class="text-dark-blue dark:text-yellow inline font-bold">math</span>. In my free time, I like to play volleyball, watch Netflix, and listen to music.</span>
+                <p class="mt-4 md:mt-0 w-fit md:text-2xl md:mb-4 mb-2 text-4xl border-b-4 border-b-dark-blue dark:text-white dark:border-b-yellow2 ">Hello!</p>
+                <span class="px-4 md:px-0 md:text-base text-center md:text-left text-[#444444] inline dark:text-white font-montserrat">I am Eliana Wang, a sophomore in the STEM Magnet Program at Montgomery Blair High School. I am interested in various areas of<span class="text-dark-blue dark:text-yellow2 inline font-bold"> computer science</span> and <span class="text-dark-blue dark:text-yellow2 inline font-bold">math</span>. In my free time, I like to play volleyball, watch Netflix, and listen to music.</span>
             </div>
     </div>
 
@@ -325,8 +351,8 @@ d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.6
         <div class="md:w-full mx-10 md:mx-0 h-full flex flex-col items-start justify-center md:px-16">
             
             <!-- Section Header code from https://www.youtube.com/watch?v=IJzuN5UGqmo  -->
-            <p class="text-5xl md:text-[4.5rem] font-weight:800 md:mb-8 w-full text-center mb-1 opacity-[0.2] dark:opacity-40 bg-clip-text text-transparent bg-gradient-to-b from-dark-blue dark:from-yellow font-bold">Projects</p>
-            <p class="md:text-[2.5rem] md:mb-8 w-full text-center mb-1 text-3xl md:text-2xl mt-[-1.5rem] md:mt-[-4rem] font-bold text-dark-blue dark:text-yellow  " data-aos="fade-up" data-aos-duration="2000">Projects</p>
+            <p class="text-5xl md:text-[4.5rem] font-weight:800 md:mb-8 w-full text-center mb-1 opacity-[0.2] dark:opacity-40 bg-clip-text text-transparent bg-gradient-to-b from-dark-blue dark:from-yellow2 font-bold">Projects</p>
+            <p class="md:text-[2.5rem] md:mb-8 w-full text-center mb-1 text-3xl md:text-2xl mt-[-1.5rem] md:mt-[-4rem] font-bold text-dark-blue dark:text-yellow2  " data-aos="fade-up" data-aos-duration="2000">Projects</p>
 
             <p class="w-full md:text-base md:mb-4 text-center lg:text-left mb-6 text-[#444444] dark:text-white font-montserrat" data-aos="fade-up" data-aos-duration="2000">Some of the projects I've worked on are:</p>
 
@@ -336,7 +362,7 @@ d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.6
                         <img src="images/clockwork preview.png" class="md:w-128 md:h-72 block static">
 
                         <div class="w-full h-[25vh] flex flex-col items-center justify-center py-4 md:px-16 px-6">
-                            <p class="w-full md:text-2xl static text-xl font-bold text-dark-blue md:text-left dark:text-yellow">Clockwork</p>
+                            <p class="w-full md:text-2xl static text-xl font-bold text-dark-blue md:text-left dark:text-yellow2">Clockwork</p>
                             <p class="w-full text-grey md:text-left dark:text-white font-montserrat">2023</p>
                             <p class="my-2 w-full border-b-2"></p>
                             <p class="w-full md:px-0 text-sm md:text-wrap md:text-left static text-[#333333] dark:text-white font-montserrat">Designed and coded a SwiftUI routine-tracker app.</p>
@@ -349,7 +375,7 @@ d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.6
                         <img src="images/leafy preview.png" class="md:w-full md:h-72 block static object-cover">
 
                         <div class="w-full h-[25vh] flex flex-col items-center justify-center py-4 md:px-16 px-6">
-                            <p class="w-full md:text-2xl static text-xl font-bold text-dark-blue md:text-left dark:text-yellow">Leafy</p>
+                            <p class="w-full md:text-2xl static text-xl font-bold text-dark-blue md:text-left dark:text-yellow2">Leafy</p>
                             <p class="w-full text-grey md:text-left dark:text-white font-montserrat">2023</p>
                             <p class="my-2 w-full border-b-2"></p>
                             <p class="w-full md:px-0 text-sm md:text-wrap md:text-left static text-grey dark:text-white font-montserrat">Designed desktop and mobile version of fake company's website.</p>
@@ -358,15 +384,15 @@ d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.6
                 </a>
             </div>
 
-            <p class="w-full text-2xl mb-1 text-center lg:text-left font-bold text-dark-blue dark:text-yellow">Other</p>
+            <p class="w-full text-2xl mb-1 text-center lg:text-left font-bold text-dark-blue dark:text-yellow2">Other</p>
             <ul class="md:text-base md:pl-10">
                 <li class="md:text-lg list-disc list-inside text-lg">
-                    <a href="https://github.com/elianabean/gnome-home-crisis-kaggle" target="_blank" class="text-[#222222] hover:text-dark-blue dark:hover:text-yellow dark:text-white font-montserrat">Gnome Home Crisis (2023)</a>
+                    <a href="https://github.com/elianabean/gnome-home-crisis-kaggle" target="_blank" class="text-[#222222] hover:text-dark-blue dark:hover:text-yellow2 dark:text-white font-montserrat">Gnome Home Crisis (2023)</a>
                     <p class="text-base md:ml-4 md:pr-36 text-[#444444] dark:text-white font-montserrat">Analyzed public sentiment on the climate crisis using Python, Pandas, and Matplotlib on The Reddit Climate Change Dataset. Using “spacy” library for language processing and “nltk” library for removing stop words.</p>
                 </li>
 
                 <li class="text-lg list-disc list-inside mt-4">
-                    <a href="#" class="text-[#222222] dark:text-white hover:text-dark-blue dark:hover:text-yellow font-montserrat">LED Colors and Optical Infiltration of Air-Gapped Computers (2022)</a>
+                    <a href="#" class="text-[#222222] dark:text-white hover:text-dark-blue dark:hover:text-yellow2 font-montserrat">LED Colors and Optical Infiltration of Air-Gapped Computers (2022)</a>
                     <p class="text-base md:ml-4 text-[#444444] dark:text-white font-montserrat">Headed a team to research the vulnerabilities of air-gapped computers to an optical infiltration method, LaserShark. Identified which LED colors on air-gapped computers are more vulnerable to infiltration. Built a simplified setup of LaserShark infiltration and simulated an attack on an air-gapped computer using a Raspberry Pi and an Arduino.</p>
                 </li>
             </ul>
@@ -375,29 +401,26 @@ d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.6
 
     <!-- contact  -->
     <div id="contact" class="bg-white dark:bg-[#121212]  font-playfairDisplay flex md:px-44 md:h-full ">
-        <div class="w-full h-full flex flex-col md:items-start items-center justify-center md:pb-16 md:pt-10 my-16">
-            <p class="md:text-2xl md:mb-3 text-2xl text-center font-bold text-dark-blue dark:text-yellow" data-aos="fade-right" data-aos-duration="2000" data-aos-offset="0">Contact</p>
-            <div class="md:w-full flex lg:flex-row md:justify-between flex-col items-start md:pr-4" data-aos="fade-right" data-aos-duration="2000" data-aos-offset="0">
+        <div class="w-full h-full flex flex-col items-center justify-center md:pb-16 md:pt-10 my-16">
+            <p class="text-2xl mb-3 text-center font-bold text-dark-blue dark:text-yellow2" data-aos="fade-right" data-aos-duration="2000" data-aos-offset="0">Contact</p>
+
+            <div class="md:w-full flex lg:flex-row md:justify-center items-start" data-aos="fade-right" data-aos-duration="2000" data-aos-offset="0">
                 <div class="flex flex-row items-center gap-4" >
                     <a href="https://www.linkedin.com/in/eliana-wang-b335a7218/" target="_blank">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 24 24" class="fill-dark-blue dark:fill-yellow" style="transform: ;msFilter:;"><path d="M20 3H4a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zM8.339 18.337H5.667v-8.59h2.672v8.59zM7.003 8.574a1.548 1.548 0 1 1 0-3.096 1.548 1.548 0 0 1 0 3.096zm11.335 9.763h-2.669V14.16c0-.996-.018-2.277-1.388-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248h-2.667v-8.59h2.56v1.174h.037c.355-.675 1.227-1.387 2.524-1.387 2.704 0 3.203 1.778 3.203 4.092v4.71z"></path></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 24 24" class="fill-dark-blue dark:fill-yellow2" style="transform: ;msFilter:;"><path d="M20 3H4a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zM8.339 18.337H5.667v-8.59h2.672v8.59zM7.003 8.574a1.548 1.548 0 1 1 0-3.096 1.548 1.548 0 0 1 0 3.096zm11.335 9.763h-2.669V14.16c0-.996-.018-2.277-1.388-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248h-2.667v-8.59h2.56v1.174h.037c.355-.675 1.227-1.387 2.524-1.387 2.704 0 3.203 1.778 3.203 4.092v4.71z"></path></svg>
                     </a>
-                    <p class="text-sm md:text-base dark:text-white font-montserrat">Eliana Wang</p>
                 </div>
 
                 <div class="lg:pl-4 flex flex-row items-center gap-4">
                     <a href="mailto:ewanginspiration@gmail.com" target="_blank">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 24 24" class="fill-dark-blue dark:fill-yellow" style="transform: ;msFilter:;"><path d="m18.73 5.41-1.28 1L12 10.46 6.55 6.37l-1.28-1A2 2 0 0 0 2 7.05v11.59A1.36 1.36 0 0 0 3.36 20h3.19v-7.72L12 16.37l5.45-4.09V20h3.19A1.36 1.36 0 0 0 22 18.64V7.05a2 2 0 0 0-3.27-1.64z"></path></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 24 24" class="fill-dark-blue dark:fill-yellow2" style="transform: ;msFilter:;"><path d="m18.73 5.41-1.28 1L12 10.46 6.55 6.37l-1.28-1A2 2 0 0 0 2 7.05v11.59A1.36 1.36 0 0 0 3.36 20h3.19v-7.72L12 16.37l5.45-4.09V20h3.19A1.36 1.36 0 0 0 22 18.64V7.05a2 2 0 0 0-3.27-1.64z"></path></svg>
                     </a>
-                    
-                    <p class="text-sm md:text-base dark:text-white font-montserrat">ewanginspiration@gmail.com</p>
                 </div>
 
                 <div class="lg:pl-4 flex flex-row items-center gap-4">
                     <a href="https://github.com/elianabean" target="_blank">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 24 24" class="fill-dark-blue dark:fill-yellow" style="transform: ;msFilter:;"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336 9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2z"></path></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 24 24" class="fill-dark-blue dark:fill-yellow2" style="transform: ;msFilter:;"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336 9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2z"></path></svg>
                     </a>
-                    <p class="text-sm md:text-base dark:text-white font-montserrat">elianabean</p>
                 </div>
             </div>
         </div>
