@@ -77,8 +77,8 @@ module.exports = {
           strokeDashoffset: '1000'
         },
       },
-    },
-    animation: {
+      },
+      animation: {
         wiggle: 'wiggle 1s ease-in-out infinite',
         'fade-in-down': '1.5s fade-in-down ease-out',
         'fade-in-down2': '1s fade-in-down ease-out',
@@ -87,7 +87,7 @@ module.exports = {
         floating2: '4s floating 3.5s infinite',
         expand: '2s expand',
         blob: "blob 7s infinite",
-        },
+      },
 
       fontFamily: {
         playfairDisplay: ["Playfair Display", "serif"],
