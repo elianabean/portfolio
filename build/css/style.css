@@ -1,6 +1,6 @@
 /* global.css */
 
-/* ! tailwindcss v3.4.1 | MIT License | https://tailwindcss.com */
+/* ! tailwindcss v3.4.3 | MIT License | https://tailwindcss.com */
 
 /*
 1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
@@ -211,6 +211,8 @@ textarea {
   /* 1 */
   line-height: inherit;
   /* 1 */
+  letter-spacing: inherit;
+  /* 1 */
   color: inherit;
   /* 1 */
   margin: 0;
@@ -234,9 +236,9 @@ select {
 */
 
 button,
-[type='button'],
-[type='reset'],
-[type='submit'] {
+input:where([type='button']),
+input:where([type='reset']),
+input:where([type='submit']) {
   -webkit-appearance: button;
   /* 1 */
   background-color: transparent;
@@ -496,6 +498,10 @@ path {
   --tw-backdrop-opacity:  ;
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
+  --tw-contain-size:  ;
+  --tw-contain-layout:  ;
+  --tw-contain-paint:  ;
+  --tw-contain-style:  ;
 }
 
 ::backdrop {
@@ -546,6 +552,10 @@ path {
   --tw-backdrop-opacity:  ;
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
+  --tw-contain-size:  ;
+  --tw-contain-layout:  ;
+  --tw-contain-paint:  ;
+  --tw-contain-style:  ;
 }
 
 .sr-only {
@@ -940,10 +950,6 @@ path {
 
 .overflow-x-clip {
   overflow-x: clip;
-}
-
-.overflow-x-visible {
-  overflow-x: visible;
 }
 
 .scroll-smooth {
@@ -1342,87 +1348,87 @@ path {
   transition-duration: 150ms;
 }
 
-:is(.dark .dark\:block) {
+.dark\:block:is(.dark *) {
   display: block;
 }
 
-:is(.dark .dark\:hidden) {
+.dark\:hidden:is(.dark *) {
   display: none;
 }
 
-:is(.dark .dark\:border-white) {
+.dark\:border-white:is(.dark *) {
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
 
-:is(.dark .dark\:border-b-yellow2) {
+.dark\:border-b-yellow2:is(.dark *) {
   --tw-border-opacity: 1;
   border-bottom-color: rgb(230 161 41 / var(--tw-border-opacity));
 }
 
-:is(.dark .dark\:bg-\[\#121212\]) {
+.dark\:bg-\[\#121212\]:is(.dark *) {
   --tw-bg-opacity: 1;
   background-color: rgb(18 18 18 / var(--tw-bg-opacity));
 }
 
-:is(.dark .dark\:bg-yellow2) {
+.dark\:bg-yellow2:is(.dark *) {
   --tw-bg-opacity: 1;
   background-color: rgb(230 161 41 / var(--tw-bg-opacity));
 }
 
-:is(.dark .dark\:bg-opacity-100) {
+.dark\:bg-opacity-100:is(.dark *) {
   --tw-bg-opacity: 1;
 }
 
-:is(.dark .dark\:from-yellow2) {
+.dark\:from-yellow2:is(.dark *) {
   --tw-gradient-from: #e6a129 var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(230 161 41 / 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
-:is(.dark .dark\:fill-yellow2) {
+.dark\:fill-yellow2:is(.dark *) {
   fill: #e6a129;
 }
 
-:is(.dark .dark\:text-white) {
+.dark\:text-white:is(.dark *) {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-:is(.dark .dark\:text-yellow2) {
+.dark\:text-yellow2:is(.dark *) {
   --tw-text-opacity: 1;
   color: rgb(230 161 41 / var(--tw-text-opacity));
 }
 
-:is(.dark .dark\:opacity-10) {
+.dark\:opacity-10:is(.dark *) {
   opacity: 0.1;
 }
 
-:is(.dark .dark\:opacity-40) {
+.dark\:opacity-40:is(.dark *) {
   opacity: 0.4;
 }
 
-:is(.dark .dark\:mix-blend-normal) {
+.dark\:mix-blend-normal:is(.dark *) {
   mix-blend-mode: normal;
 }
 
-:is(.dark .dark\:drop-shadow-full-white) {
+.dark\:drop-shadow-full-white:is(.dark *) {
   --tw-drop-shadow: drop-shadow(0px 0px 12px rgba(255, 255, 255, 0.4));
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
-:is(.dark .dark\:before\:border-white)::before {
+.dark\:before\:border-white:is(.dark *)::before {
   content: var(--tw-content);
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
 
-:is(.dark .dark\:hover\:text-yellow2:hover) {
+.dark\:hover\:text-yellow2:hover:is(.dark *) {
   --tw-text-opacity: 1;
   color: rgb(230 161 41 / var(--tw-text-opacity));
 }
 
-:is(.dark .hover\:dark\:text-yellow2):hover {
+.hover\:dark\:text-yellow2:is(.dark *):hover {
   --tw-text-opacity: 1;
   color: rgb(230 161 41 / var(--tw-text-opacity));
 }
