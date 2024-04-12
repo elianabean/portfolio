@@ -50,6 +50,9 @@ new TypeIt("#name", {
 
 /*from https://cruip.com/implementing-tailwind-css-dark-mode-toggle-with-no-flicker/ */
 const lightSwitches = document.querySelectorAll('.light-switch');
+const clipTop = document.getElementById("clipTop");
+const clipBottom = document.getElementById("clipBottom");
+const geeks = document.getElementById("geeks");
 if (lightSwitches.length > 0) {
   lightSwitches.forEach((lightSwitch, i) => {
     if (localStorage.getItem('dark-mode') === 'true') {
@@ -65,12 +68,29 @@ if (lightSwitches.length > 0) {
       if (lightSwitch.checked) {
         document.documentElement.classList.add('dark');
         localStorage.setItem('dark-mode', true);
+        clipTop.classList.add("dark");
+        clipBottom.classList.add("dark");
+        geeks.classList.add("dark");
+        console.log("dark");
       } else {
         document.documentElement.classList.remove('dark');
         localStorage.setItem('dark-mode', false);
+        clipTop.classList.remove("dark");
+        clipBottom.classList.remove("dark");
+        geeks.classList.remove("dark");
+        console.log("light");
       }
     });
   });
+}
+
+const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)');
+if (prefersDarkMode.matches && !isDarkModeFromStorage || localStorage.getItem('dark-mode') === 'true') {
+  document.documentElement.classList.add('dark');
+  localStorage.setItem('dark-mode', true);
+  clipTop.classList.add("dark");
+  clipBottom.classList.add("dark");
+  geeks.classList.add("dark");
 }
 
 //clip animations
